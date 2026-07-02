@@ -4,8 +4,9 @@ Marketing site for **Freshman Consulting** — we work with businesses, find the
 inefficiencies in their workflows, and fix them.
 
 Built on the approved **Monolith** brand direction: ink + white + ivory, a
-single typeface (Manrope), one whisper of clay. Russian-first, with English
-and Uzbek at `/en` and `/uz`.
+single typeface (Manrope), one red accent (#E5484D, with #CE2C31 as the
+AA-safe step for small text on light). Russian-first, with English and Uzbek
+at `/en` and `/uz`.
 
 ## Stack
 

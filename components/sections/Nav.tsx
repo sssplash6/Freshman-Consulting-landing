@@ -97,7 +97,9 @@ export function Nav({
                 className={cn(
                   "text-[13px] font-bold tracking-[0.08em] transition-colors",
                   l === locale
-                    ? "text-clay"
+                    ? solid
+                      ? "text-accent-deep"
+                      : "text-accent"
                     : solid
                       ? "text-muted hover:text-ink"
                       : "text-paper/80 hover:text-paper",
@@ -183,7 +185,7 @@ export function Nav({
                 aria-current={l === locale ? "page" : undefined}
                 className={cn(
                   "text-[15px] font-bold tracking-[0.08em]",
-                  l === locale ? "text-clay" : "text-muted",
+                  l === locale ? "text-accent-deep" : "text-muted",
                 )}
               >
                 {LOCALE_LABELS[l]}

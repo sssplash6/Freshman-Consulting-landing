@@ -47,7 +47,7 @@ export function CaseStudies({ content }: { content: SiteContent }) {
                   </dd>
                 </div>
                 <div className="mt-auto border-t border-hairline pt-5">
-                  <dt className="text-[11px] font-bold uppercase tracking-[0.18em] text-clay">
+                  <dt className="text-[11px] font-bold uppercase tracking-[0.18em] text-accent-deep">
                     {rows.result}
                   </dt>
                   <dd className="mt-1.5 text-[14.5px] font-semibold leading-relaxed text-ink">

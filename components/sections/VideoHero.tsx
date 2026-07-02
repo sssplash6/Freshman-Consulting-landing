@@ -109,7 +109,7 @@ export function VideoHero({ content }: { content: SiteContent }) {
         {hero.scrollCue}
         <span
           aria-hidden
-          className={cn("block h-2 w-2 rounded-full bg-clay", "animate-pulse-dot")}
+          className={cn("block h-2 w-2 rounded-full bg-accent", "animate-pulse-dot")}
         />
       </a>
     </section>

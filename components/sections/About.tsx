@@ -25,7 +25,7 @@ export function About({ content }: { content: SiteContent }) {
           {about.points.map((point) => (
             <div key={point.title}>
               <h3 className="text-[20px] font-bold tracking-display text-ink md:text-[22px]">
-                <span aria-hidden className="mr-2 text-clay">
+                <span aria-hidden className="mr-2 text-accent">
                   —
                 </span>
                 {point.title}

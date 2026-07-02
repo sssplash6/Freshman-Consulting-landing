@@ -24,11 +24,11 @@ export function Button({
 } & React.AnchorHTMLAttributes<HTMLAnchorElement>) {
   const variants: Record<Variant, string> = {
     primary:
-      "bg-ink text-paper border border-ink hover:bg-clay hover:border-clay",
+      "bg-ink text-paper border border-ink hover:bg-accent-deep hover:border-accent-deep",
     secondary:
       "bg-transparent text-ink border border-hairline hover:border-ink",
     "ghost-dark":
-      "bg-paper text-ink border border-paper hover:bg-clay hover:text-paper hover:border-clay",
+      "bg-paper text-ink border border-paper hover:bg-accent-deep hover:text-paper hover:border-accent-deep",
   };
 
   return (

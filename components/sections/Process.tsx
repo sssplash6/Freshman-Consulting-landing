@@ -23,7 +23,7 @@ export function Process({ content }: { content: SiteContent }) {
               className="grid grid-cols-1 gap-x-6 gap-y-4 border-b border-hairline py-8 md:grid-cols-12 md:items-baseline md:py-10"
             >
               <div className="flex items-baseline gap-4 md:col-span-6 md:contents">
-                <span className="text-[15px] font-bold tracking-wide tabular-nums text-clay md:col-span-2">
+                <span className="text-[15px] font-bold tracking-wide tabular-nums text-accent-deep md:col-span-2">
                   {step.num}
                 </span>
                 <h3 className="text-[26px] font-bold tracking-display text-ink md:col-span-4 md:text-[30px]">

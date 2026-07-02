@@ -2,7 +2,7 @@
 
 /* ───────────────────────────────────────────────────────────
    Freshman Consulting — "Monolith" design tokens
-   Ink + White + Ivory, with a 1% whisper of clay.
+   Ink + White + Ivory, with a single red accent.
    Single typeface: Manrope (loaded via next/font in layout).
    ─────────────────────────────────────────────────────────── */
 @theme {
@@ -11,7 +11,13 @@
   --color-ink-soft: #44443e; /* body copy on light */
   --color-paper: #ffffff; /* primary background */
   --color-ivory: #f4f1ea; /* stats / trust band */
-  --color-clay: #b4502e; /* the single accent — used sparingly */
+  /* The single accent, two steps (Radix red 9/11 pairing):
+     accent      — graphics, dots, large display, text on dark (4.9:1 on ink)
+     accent-deep — small text on light bgs + fills behind white text
+                   (5.2:1 on paper, 4.6:1 on ivory — AA; plain accent is
+                   only 3.9:1 on white, so never use it for small light-bg text) */
+  --color-accent: #e5484d;
+  --color-accent-deep: #ce2c31;
 
   /* Greys — tuned to meet WCAG AA on their intended backgrounds */
   --color-muted: #6b6b63; /* eyebrows / labels on light (AA on paper + ivory) */
@@ -69,10 +75,10 @@ body {
   letter-spacing: -0.04em;
 }
 
-/* Visible keyboard focus everywhere (WCAG 2.4.7). Clay reads on both
-   light and dark backgrounds; the offset keeps it clear of solid fills. */
+/* Visible keyboard focus everywhere (WCAG 2.4.7). The accent clears 3:1
+   against both paper and ink; the offset keeps it clear of solid fills. */
 :focus-visible {
-  outline: 2px solid var(--color-clay);
+  outline: 2px solid var(--color-accent);
   outline-offset: 2px;
   border-radius: 1px;
 }
@@ -91,6 +97,6 @@ body {
 
 /* Thin scrollbar that suits the dark sections */
 ::selection {
-  background: var(--color-clay);
+  background: var(--color-accent-deep);
   color: #fff;
 }
