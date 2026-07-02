@@ -1,4 +1,4 @@
-# Humonur Systems — Landing Page
+# Freshman COnsulting— Landing Page
 
 The marketing site for **Humonur Systems**, an AI agency that builds custom AI
 systems so a business never misses a customer.
