@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+/* ───────────────────────────────────────────────────────────
+   Freshman Consulting — "Monolith" design tokens
+   Ink + White + Ivory, with a 1% whisper of clay.
+   Single typeface: Manrope (loaded via next/font in layout).
+   ─────────────────────────────────────────────────────────── */
+@theme {
+  /* Core palette */
+  --color-ink: #0e0e0c; /* near-black: text on light, bg on dark */
+  --color-ink-soft: #44443e; /* body copy on light */
+  --color-paper: #ffffff; /* primary background */
+  --color-ivory: #f4f1ea; /* stats / trust band */
+  --color-clay: #b4502e; /* the single accent — used sparingly */
+
+  /* Greys — tuned to meet WCAG AA on their intended backgrounds */
+  --color-muted: #6b6b63; /* eyebrows / labels on light (AA on paper + ivory) */
+  --color-fog: #8a8a82; /* muted text on dark (AA on ink) */
+  --color-fog-soft: #9b9b93; /* secondary text on dark */
+  --color-hairline: #e6e3db; /* hairline rules on light */
+  --color-hairline-dark: #2a2a26; /* hairline rules on dark */
+
+  /* Type */
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+
+  /* Motion */
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-pulse-dot: pulse-dot 2.4s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+}
+
+/* ─── Base ─────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Tighten display headings the Monolith way */
+.tracking-display {
+  letter-spacing: -0.04em;
+}
+
+/* Visible keyboard focus everywhere (WCAG 2.4.7). Clay reads on both
+   light and dark backgrounds; the offset keeps it clear of solid fills. */
+:focus-visible {
+  outline: 2px solid var(--color-clay);
+  outline-offset: 2px;
+  border-radius: 1px;
+}
+
+/* Respect reduced-motion globally */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Thin scrollbar that suits the dark sections */
+::selection {
+  background: var(--color-clay);
+  color: #fff;
+}
