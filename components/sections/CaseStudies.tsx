@@ -1,6 +1,7 @@
 import { Section } from "@/components/primitives/Section";
 import { Container } from "@/components/primitives/Container";
 import { Eyebrow } from "@/components/primitives/Eyebrow";
+import { Reveal } from "@/components/primitives/Reveal";
 import type { SiteContent } from "@/lib/content";
 import { SECTION_IDS } from "@/lib/config";
 
@@ -12,17 +13,19 @@ export function CaseStudies({ content }: { content: SiteContent }) {
   return (
     <Section id={SECTION_IDS.caseStudies} tone="ivory">
       <Container>
-        <div className="flex flex-wrap items-end justify-between gap-4 border-b border-hairline pb-6">
+        <Reveal className="flex flex-wrap items-end justify-between gap-4 border-b border-hairline pb-6">
           <Eyebrow as="h2">{caseStudies.label}</Eyebrow>
           <p className="text-[clamp(1.5rem,3vw,2.1rem)] font-extrabold tracking-display text-ink">
             {caseStudies.title}
           </p>
-        </div>
+        </Reveal>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {caseStudies.items.map((cs) => (
-            <article
+          {caseStudies.items.map((cs, i) => (
+            <Reveal
               key={cs.sector}
+              as="article"
+              delay={i * 80}
               className="flex flex-col border border-hairline bg-paper p-7"
             >
               <h3 className="text-[17px] font-extrabold tracking-[-0.01em] text-ink">
@@ -55,7 +58,7 @@ export function CaseStudies({ content }: { content: SiteContent }) {
                   </dd>
                 </div>
               </dl>
-            </article>
+            </Reveal>
           ))}
         </div>
       </Container>
