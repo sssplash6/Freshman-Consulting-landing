@@ -72,10 +72,12 @@ export function VideoHero({ content }: { content: SiteContent }) {
         />
       )}
 
-      {/* Legibility gradient: darker at top (nav) and bottom (headline). */}
+      {/* Legibility gradient: darker at top (nav) and bottom (headline).
+          Strong enough that overlay text stays AA-readable over bright
+          footage — the real video's brightness is not under our control. */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/10 to-ink/75"
+        className="absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/15 to-ink/80"
       />
 
       {/* Headline overlay */}
@@ -93,7 +95,6 @@ export function VideoHero({ content }: { content: SiteContent }) {
         <button
           type="button"
           onClick={toggleMute}
-          aria-pressed={!muted}
           className="absolute bottom-6 right-6 z-10 border border-paper/30 bg-ink/40 px-4 py-2 text-[13px] font-semibold text-paper/90 backdrop-blur-sm transition-colors hover:border-paper/70 md:bottom-8 md:right-10"
         >
           {muted ? hero.unmute : hero.mute}
@@ -103,7 +104,7 @@ export function VideoHero({ content }: { content: SiteContent }) {
       {/* Scroll cue */}
       <a
         href={`#${SECTION_IDS.stakes}`}
-        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-paper/60 transition-colors hover:text-paper md:flex"
+        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-paper/80 transition-colors hover:text-paper md:flex"
       >
         {hero.scrollCue}
         <span

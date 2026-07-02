@@ -66,15 +66,16 @@ export function Nav({
           <span
             className={cn(
               "text-[10px] font-semibold tracking-[0.22em] md:text-[11px]",
-              solid ? "text-muted" : "text-paper/60",
+              solid ? "text-muted" : "text-paper/75",
             )}
           >
             {brand.suffix}
           </span>
         </a>
 
-        {/* Center links — desktop */}
-        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 md:flex">
+        {/* Center links — desktop. lg+ only: RU/UZ labels are wide enough to
+            collide with the logo and CTA cluster at md widths. */}
+        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 lg:flex">
           {nav.links.map((l) => (
             <a key={l.href} href={l.href} className={linkCls}>
               {l.label}
@@ -83,7 +84,7 @@ export function Nav({
         </nav>
 
         {/* Right cluster — desktop */}
-        <div className="hidden items-center gap-6 md:flex">
+        <div className="hidden items-center gap-6 lg:flex">
           <nav
             aria-label={nav.langAriaLabel}
             className="flex items-center gap-3"
@@ -98,8 +99,8 @@ export function Nav({
                   l === locale
                     ? "text-clay"
                     : solid
-                      ? "text-ink/50 hover:text-ink"
-                      : "text-paper/55 hover:text-paper",
+                      ? "text-muted hover:text-ink"
+                      : "text-paper/80 hover:text-paper",
                 )}
               >
                 {LOCALE_LABELS[l]}
@@ -121,7 +122,8 @@ export function Nav({
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? nav.menuClose : nav.menuOpen}
           aria-expanded={open}
-          className="-mr-2 flex h-10 w-10 items-center justify-center md:hidden"
+          aria-controls="mobile-menu"
+          className="-mr-2 flex h-10 w-10 items-center justify-center lg:hidden"
         >
           <span className="relative block h-4 w-5">
             <span
@@ -149,10 +151,13 @@ export function Nav({
         </button>
       </Container>
 
-      {/* Mobile menu */}
+      {/* Mobile menu. `inert` keeps the collapsed panel out of the tab order
+          and accessibility tree — max-height clipping alone does not. */}
       <div
+        id="mobile-menu"
+        inert={!open}
         className={cn(
-          "overflow-hidden bg-paper transition-[max-height] duration-300 md:hidden",
+          "overflow-hidden bg-paper transition-[max-height] duration-300 lg:hidden",
           open ? "max-h-96 border-t border-hairline" : "max-h-0",
         )}
       >
@@ -178,7 +183,7 @@ export function Nav({
                 aria-current={l === locale ? "page" : undefined}
                 className={cn(
                   "text-[15px] font-bold tracking-[0.08em]",
-                  l === locale ? "text-clay" : "text-ink/50",
+                  l === locale ? "text-clay" : "text-muted",
                 )}
               >
                 {LOCALE_LABELS[l]}

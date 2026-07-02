@@ -19,7 +19,7 @@ export const en: SiteContent = {
 
   nav: {
     links: [
-      { label: "Latest updates", href: "#case-studies" },
+      { label: "Case studies", href: "#case-studies" },
       { label: "About us", href: "#about" },
       { label: "What we do", href: "#process" },
     ],
@@ -134,7 +134,7 @@ export const en: SiteContent = {
       {
         num: "03",
         title: "We build",
-        body: "If you decide to move forward, we take delivery on ourselves: from prototype to production.",
+        body: "If you decide to move forward, we handle delivery end to end: from prototype to production.",
       },
       {
         num: "04",

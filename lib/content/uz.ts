@@ -5,7 +5,7 @@ export const uz: SiteContent = {
   locale: "uz",
 
   meta: {
-    title: "Freshman Consulting — biznes jarayonlaridagi yo'qotishlarni topamiz va tuzatamiz",
+    title: "Freshman Consulting — biznes jarayonlaridagi yo'qotishlarni topamiz va bartaraf etamiz",
     description:
       "Freshman Consulting kompaniyalar bilan ishlaydi: ish jarayonlaridagi tor joylarni topadi va bartaraf etadi — bepul auditdan tayyor yechim va uzoq muddatli hamkorlikkacha.",
     skipToContent: "Mazmunga o'tish",
@@ -19,7 +19,7 @@ export const uz: SiteContent = {
 
   nav: {
     links: [
-      { label: "So'nggi yangiliklar", href: "#case-studies" },
+      { label: "Keyslar", href: "#case-studies" },
       { label: "Biz haqimizda", href: "#about" },
       { label: "Nima qilamiz", href: "#process" },
     ],
@@ -73,7 +73,7 @@ export const uz: SiteContent = {
     points: [
       {
         title: "Topamiz",
-        body: "Jarayonni boshdan-oxirigacha ko'ramiz — birinchi arizadan to'lovgacha — va vaqt, pul, mijozlar qayerda yo'qolayotganini aniqlaymiz.",
+        body: "Jarayonni boshidan oxirigacha ko'ramiz — birinchi arizadan to'lovgacha — va vaqt, pul, mijozlar qayerda yo'qolayotganini aniqlaymiz.",
       },
       {
         title: "Tuzatamiz",
@@ -111,7 +111,7 @@ export const uz: SiteContent = {
       {
         sector: "Til o'rganish",
         problem:
-          "O'quvchilarga mahalliy dasturga mos, sodda so'z yodlash vositasi yetishmasdi.",
+          "O'quvchilarga mahalliy o'quv dasturiga mos, sodda so'z yodlash vositasi yetishmasdi.",
         built: "Intervalli takrorlash asosidagi so'z yodlash mobil ilovasi.",
         result: "Marketing byudjetisiz 1 000+ faol foydalanuvchi.",
       },

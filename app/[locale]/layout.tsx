@@ -38,11 +38,14 @@ export async function generateMetadata({
       type: "website",
       locale,
       siteName: "Freshman Consulting",
+      // Interim share image; swap for a real OG card before launch.
+      images: ["/hero-poster.jpg"],
     },
     twitter: {
       card: "summary_large_image",
       title: content.meta.title,
       description: content.meta.description,
+      images: ["/hero-poster.jpg"],
     },
   };
 }
