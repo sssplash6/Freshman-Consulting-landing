@@ -1,6 +1,7 @@
 import { Section } from "@/components/primitives/Section";
 import { Container } from "@/components/primitives/Container";
 import { Eyebrow } from "@/components/primitives/Eyebrow";
+import { Reveal } from "@/components/primitives/Reveal";
 import type { SiteContent } from "@/lib/content";
 import { SECTION_IDS } from "@/lib/config";
 import { cn } from "@/lib/utils/cn";
@@ -12,7 +13,7 @@ export function Stakes({ content }: { content: SiteContent }) {
   return (
     <Section id={SECTION_IDS.stakes} tone="ink">
       <Container>
-        <div className="max-w-[52ch]">
+        <Reveal className="max-w-[52ch]">
           <Eyebrow as="h2" tone="dark">
             {stakes.label}
           </Eyebrow>
@@ -22,12 +23,13 @@ export function Stakes({ content }: { content: SiteContent }) {
           <p className="mt-5 text-[16px] leading-relaxed text-fog-soft md:text-[17px]">
             {stakes.intro}
           </p>
-        </div>
+        </Reveal>
 
         <dl className="mt-14 grid grid-cols-2 gap-y-12 md:mt-16 lg:grid-cols-4 lg:gap-y-0">
           {stakes.items.map((stat, i) => (
-            <div
+            <Reveal
               key={stat.label}
+              delay={i * 80}
               className={cn(
                 "flex flex-col",
                 i > 0 && "lg:border-l lg:border-hairline-dark lg:pl-10",
@@ -45,7 +47,7 @@ export function Stakes({ content }: { content: SiteContent }) {
                   {stat.source}
                 </dd>
               )}
-            </div>
+            </Reveal>
           ))}
         </dl>
       </Container>

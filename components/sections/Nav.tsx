@@ -35,7 +35,9 @@ export function Nav({
   const solid = scrolled || open;
 
   const linkCls = cn(
-    "text-[15px] font-medium transition-colors",
+    "relative text-[15px] font-medium transition-colors",
+    // Underline grows from the left on hover (transform, not width).
+    "after:absolute after:inset-x-0 after:-bottom-1.5 after:h-px after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.16,1,0.3,1)] after:content-[''] hover:after:scale-x-100",
     solid ? "text-ink/75 hover:text-ink" : "text-paper/80 hover:text-paper",
   );
 

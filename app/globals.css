@@ -33,6 +33,8 @@
   /* Motion */
   --animate-marquee: marquee 38s linear infinite;
   --animate-pulse-dot: pulse-dot 2.4s ease-in-out infinite;
+  --animate-hero-in: hero-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-hero-drift: hero-drift 22s ease-out forwards;
 }
 
 @keyframes marquee {
@@ -56,9 +58,33 @@
   }
 }
 
+/* Hero headline/sub entrance on load (staggered via animation-delay). */
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slow push-in on the hero video — gives static-feeling footage some life. */
+@keyframes hero-drift {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+
 /* ─── Base ─────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
+  /* Keep anchored sections clear of the fixed nav (68–76px tall). */
+  scroll-padding-top: 5.5rem;
   -webkit-text-size-adjust: 100%;
 }
 

@@ -61,7 +61,7 @@ export function VideoHero({ content }: { content: SiteContent }) {
           playsInline
           preload="metadata"
           onError={() => setVideoOk(false)}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover animate-hero-drift"
         />
       ) : (
         // eslint-disable-next-line @next/next/no-img-element
@@ -82,10 +82,10 @@ export function VideoHero({ content }: { content: SiteContent }) {
 
       {/* Headline overlay */}
       <Container className="relative flex h-full flex-col justify-end pb-24 md:pb-28">
-        <h1 className="max-w-[18ch] text-[clamp(2.1rem,6vw,4rem)] font-extrabold leading-[1.04] tracking-display text-paper">
+        <h1 className="max-w-[18ch] animate-hero-in text-[clamp(2.1rem,6vw,4rem)] font-extrabold leading-[1.04] tracking-display text-paper">
           {hero.tagline}
         </h1>
-        <p className="mt-4 max-w-[44ch] text-[17px] leading-relaxed text-paper/75 md:text-[19px]">
+        <p className="mt-4 max-w-[44ch] animate-hero-in text-[17px] leading-relaxed text-paper/75 [animation-delay:130ms] md:text-[19px]">
           {hero.sub}
         </p>
       </Container>
