@@ -13,8 +13,13 @@ export const SECTION_IDS = {
   hero: "top",
   stakes: "stakes",
   about: "about",
+  whyUs: "why-us",
+  credentials: "numbers",
   caseStudies: "case-studies",
+  guides: "guides",
   process: "process",
+  team: "team",
+  faq: "faq",
 } as const;
 
 /** Supported locales. Russian is the default (business audience in UZ). */

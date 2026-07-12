@@ -86,6 +86,49 @@ export const en: SiteContent = {
     ],
   },
 
+  difference: {
+    label: "Why us",
+    title: "Not Big4. Not a freelancer. A special-projects team.",
+    positioning:
+      "We help businesses raise financing, structure investments, automate operations and execute strategic projects in Central Asia: from the idea to a working system.",
+    items: [
+      {
+        versus: "Big4",
+        body: "The same rigor without the layers of partners and juniors. You work with the people who actually do the project: shorter timelines, a fraction of the fee.",
+      },
+      {
+        versus: "Local consultants",
+        body: "International standards: financial modeling, access to DFIs and export credit agencies, documents that banks and investors understand.",
+      },
+      {
+        versus: "Freelancers",
+        body: "We don't vanish after delivery. We own the result: we build, deploy, and stay on support.",
+      },
+    ],
+  },
+
+  // TODO(owner): draft figures from the partner — confirm before launch.
+  credentials: {
+    label: "The numbers",
+    title: "Consulting runs on numbers. Here are ours.",
+    items: [
+      { value: "$10M+", label: "in project value advised" },
+      { value: "20+", label: "financing mandates" },
+      { value: "10+", label: "systems built and deployed" },
+      { value: "3", label: "countries we work across" },
+    ],
+  },
+
+  // TODO(owner): replace with real client logos when ready.
+  clients: {
+    label: "Trusted by",
+    names: [
+      "Barbershop · Tashkent",
+      "Education center · Tashkent",
+      "Language platform · 1,000+ users",
+    ],
+  },
+
   caseStudies: {
     label: "Case studies",
     title: "What we've already done",
@@ -117,6 +160,32 @@ export const en: SiteContent = {
     ],
   },
 
+  guides: {
+    label: "Guides",
+    title: "We break down the complex. For free.",
+    intro:
+      "Practical materials on financing and delivering projects in Uzbekistan, written from real deals.",
+    comingSoon: "Coming soon",
+    items: [
+      {
+        title: "How to Raise Project Finance in Uzbekistan",
+        blurb: "Step by step: from the financial model to the first disbursement.",
+      },
+      {
+        title: "Sinosure Financing Guide",
+        blurb: "How Chinese export credit insurance works and which projects it fits.",
+      },
+      {
+        title: "EPC Procurement Risks",
+        blurb: "What to check in the contract before signing so the build never stalls.",
+      },
+      {
+        title: "IFC vs Commercial Banks",
+        blurb: "Two routes to capital compared: cost, timelines, requirements.",
+      },
+    ],
+  },
+
   process: {
     label: "What we do",
     note: "Four steps — from first look to long-term partnership.",
@@ -140,6 +209,66 @@ export const en: SiteContent = {
         num: "04",
         title: "Partnership",
         body: "We stay your technical side: support, improvements, new points of growth.",
+      },
+    ],
+  },
+
+  // TODO(owner): refine the bios.
+  team: {
+    label: "Team",
+    title: "Who you'll work with",
+    intro: "A small team where each person personally owns their part of the project.",
+    members: [
+      {
+        name: "Valera Arakelyan",
+        role: "Partner · Strategy & Vision",
+        bio: "Sets the direction: project strategy, partnerships, company growth.",
+      },
+      {
+        name: "Said Abdullayev",
+        role: "Partner · Corporate Finance",
+        bio: "Raising financing, ECA and DFI work, deal structuring.",
+      },
+      {
+        name: "Abdulhamid Nuriddinov",
+        role: "Partner · Technology & Automation",
+        bio: "Designs and builds systems: process automation, integrations, AI solutions.",
+      },
+      {
+        name: "Samandar",
+        role: "Partner · Technology & Automation",
+        bio: "Designs and builds systems: process automation, integrations, AI solutions.",
+      },
+    ],
+  },
+
+  faq: {
+    label: "FAQ",
+    title: "Frequently asked questions",
+    items: [
+      {
+        q: "Where does the work start?",
+        a: "With a free assessment. We take apart your processes or project, show where the money leaks, and propose a plan. No strings attached.",
+      },
+      {
+        q: "How are you different from Big4 and freelancers?",
+        a: "From Big4: speed and price at the same level of rigor. From freelancers: accountability for the result. We build, deploy, and stay on support.",
+      },
+      {
+        q: "What kinds of projects do you take on?",
+        a: "Raising financing, structuring investments, strategic projects, and operations automation. Uzbekistan and Central Asia.",
+      },
+      {
+        q: "How do you charge?",
+        a: "Fixed price per stage or a retainer. We agree after the assessment, once the scope is clear. No hidden hours.",
+      },
+      {
+        q: "Do you only work in Tashkent?",
+        a: "No. We're based in Tashkent but work across Central Asia. Most communication happens online.",
+      },
+      {
+        q: "How long does a project take?",
+        a: "The assessment: up to a week. After that it depends on scale. First deployments are usually live in production within 2–6 weeks.",
       },
     ],
   },

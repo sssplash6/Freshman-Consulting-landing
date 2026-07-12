@@ -64,7 +64,10 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={manrope.variable}>
-      <body className="antialiased">
+      {/* suppressHydrationWarning: browser extensions (Grammarly et al.) inject
+          attributes into <body> before hydration; only this tag's attribute
+          mismatches are silenced, children are still checked. */}
+      <body className="antialiased" suppressHydrationWarning>
         <a
           href="#top"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:bg-ink focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-paper"

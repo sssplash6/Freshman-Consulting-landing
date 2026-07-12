@@ -80,11 +80,55 @@ export interface SiteContent {
     points: { title: string; body: string }[];
   };
 
+  /** Differentiation vs Big4 / local consultants / freelancers. */
+  difference: {
+    label: string;
+    title: string;
+    /** The positioning statement, e.g. "We help businesses raise financing…". */
+    positioning: string;
+    items: { versus: string; body: string }[];
+  };
+
+  /** Consulting-style proof numbers ($10M+ advised, 20+ mandates, …). */
+  credentials: {
+    label: string;
+    title: string;
+    items: Stat[];
+  };
+
+  /** Client / project wordmark strip. Renders only when names is non-empty. */
+  clients: {
+    label: string;
+    names: string[];
+  };
+
   caseStudies: {
     label: string;
     title: string;
     rowLabels: { problem: string; built: string; result: string };
     items: CaseStudy[];
+  };
+
+  /** Free finance guides (lead magnets). */
+  guides: {
+    label: string;
+    title: string;
+    intro: string;
+    comingSoon: string;
+    items: { title: string; blurb: string }[];
+  };
+
+  team: {
+    label: string;
+    title: string;
+    intro: string;
+    members: { name: string; role: string; bio: string }[];
+  };
+
+  faq: {
+    label: string;
+    title: string;
+    items: { q: string; a: string }[];
   };
 
   process: {
