@@ -236,7 +236,7 @@ export const uz: SiteContent = {
         bio: "Tizimlarni loyihalaydi va quradi: jarayonlarni avtomatlashtirish, integratsiyalar, AI yechimlari.",
       },
       {
-        name: "Samandar",
+        name: "Samandar Norboev",
         role: "Partnyor · Texnologiya va avtomatlashtirish",
         bio: "Tizimlarni loyihalaydi va quradi: jarayonlarni avtomatlashtirish, integratsiyalar, AI yechimlari.",
       },

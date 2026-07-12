@@ -235,7 +235,7 @@ export const en: SiteContent = {
         bio: "Designs and builds systems: process automation, integrations, AI solutions.",
       },
       {
-        name: "Samandar",
+        name: "Samandar Norboev",
         role: "Partner · Technology & Automation",
         bio: "Designs and builds systems: process automation, integrations, AI solutions.",
       },
